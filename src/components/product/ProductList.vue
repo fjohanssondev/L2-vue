@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="products">
     <div v-for="product in products">
       <ProductCard :key="product.id" v-bind="{product}" />
     </div>
@@ -34,6 +34,12 @@
   fetchProducts()
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  grid-auto-rows: 1fr;
+  column-gap: 1rem;
+  row-gap: 3rem;
+}
 </style>

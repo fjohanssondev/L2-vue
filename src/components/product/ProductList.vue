@@ -1,7 +1,7 @@
 <template>
   <section>
     <div v-for="product in products">
-      <ProductCard :key="product.id" v-bind="product" />
+      <ProductCard :key="product.id" v-bind="{product}" />
     </div>
   <p v-if="loading">Loading products...</p>
   </section>

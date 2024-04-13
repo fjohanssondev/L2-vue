@@ -1,9 +1,13 @@
-# Vue 3 + TypeScript + Vite
+# Product Listing
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Vue 3 App
 
-## Recommended Setup
+Trying to learn Vue 3. Currently building an e-commerce with NextJS on the side. Therefor tested Vue to list some products and filter it.
 
-- [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar) and disable Vetur
+### Stuff learned
 
-- Use [vue-tsc](https://github.com/vuejs/language-tools/tree/master/packages/tsc) for performing the same type checking from the command line, or for generating d.ts files for SFCs.
+1. Create components
+2. Pass props
+3. Define the types of props
+4. Emit events from children (props are immutable, update through emits)
+5. Receive the callback from the emit in the parent

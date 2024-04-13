@@ -1,6 +1,6 @@
 <template>
   <section class="products">
-    <div v-for="product in products">
+    <div v-for="product in filteredProducts()">
       <ProductCard :key="product.id" v-bind="{product}" />
     </div>
   <p v-if="loading">Loading products...</p>
@@ -12,9 +12,17 @@
   import type { Product } from "../../../types/types"
   import ProductCard from "./ProductCard.vue"
 
+  const props = defineProps({
+    filterValue: {
+      type: String,
+      required: true
+    }
+  })
+
   const products = ref<Product[]>([])
   const loading = ref(true)
 
+  const filteredProducts = () => props.filterValue !== "" ? products.value.filter(product => product.category === props.filterValue) : products.value
   const fetchProducts = async () => {
     loading.value = true
     
@@ -30,7 +38,7 @@
       console.error(err)
     }
   }
-  
+
   fetchProducts()
 </script>
 

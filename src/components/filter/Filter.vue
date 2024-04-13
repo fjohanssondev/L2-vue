@@ -12,7 +12,7 @@ import { ref } from 'vue';
 
 const categories = ref<string[]>([])
 
-const props = defineProps({
+defineProps({
   filterValue: {
     type: String,
     required: true
